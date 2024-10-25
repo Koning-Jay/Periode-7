@@ -1,0 +1,348 @@
+/* RESPONSIVE */
+$screen-sm-min: 576px; // Small tablets and large smartphones (landscape view)
+$screen-md-min: 768px; // Small tablets (portrait view)
+$screen-lg-min: 992px; // Tablets and small desktops
+$screen-xl-min: 1200px; // Large tablets and desktops
+
+/* Small devices */
+@mixin sm {
+    @media (min-width: #{$screen-sm-min}) {
+        @content;
+    }
+}
+
+/* Medium devices */
+@mixin md {
+    @media (min-width: #{$screen-md-min}) {
+        @content;
+    }
+}
+
+/* Large devices */
+@mixin lg {
+    @media (min-width: #{$screen-lg-min}) {
+        @content;
+    }
+}
+
+/* Extra large devices */
+@mixin xl {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+}
+   
+*{
+    font-family: "Rowdies", sans-serif;
+}
+h2{
+    font-size: 1.5rem;
+    color:  rgb(135, 157, 175);
+    @include md {
+        font-size: 3rem;
+    }
+}
+
+h4{
+  color:  rgb(135, 157, 175) !important;
+
+}
+
+
+
+h6, h5{
+    color: antiquewhite;
+}
+
+a{
+    text-decoration: none !important;
+    color:  rgb(135, 157, 175);
+    letter-spacing: 0rem;
+    &:hover{
+        color:  rgb(135, 157, 175);
+    }
+
+}
+
+.reserveren{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    .btn{
+        background-color: rgb(94, 97, 97);
+        color:  rgb(135, 157, 175);
+    }
+    input{
+        background-color: rgb(94, 97, 97);
+        border: none;
+        padding: 0.2rem;
+        text-align: center;
+        max-width: 50%;
+        transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
+        border-radius: 5px;
+        &:hover{
+            max-width: 100%;
+            transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
+
+        }
+        &::placeholder{
+            color:  rgb(135, 157, 175);
+        }
+    }
+}
+
+.gereserveerdeBoeken{
+    display: flex;
+    align-items: center;
+    padding-top: 0.5rem;
+}
+
+#fillInMessage{
+    position: fixed;
+    padding: 20px;
+    border-radius: 7px;
+    top: -10%;
+    z-index: 100;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(8px);
+    transition: ease-in 0.3s;
+    letter-spacing: 7px;
+    border-radius: 5px;
+  
+  }
+
+.bookList{
+    -webkit-box-shadow: 0px 13px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 13px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 13px 5px 0px rgba(0,0,0,0.75);
+    backdrop-filter: blur(8px);
+    border-radius: 1rem;
+    padding: 1rem;
+}  
+  
+  #fillInMessage h3{
+    font-size: 25px;
+    margin: 0;
+    color: rgb(135, 157, 175);
+  }
+  
+  .foreground{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px);
+  }
+
+  .navbar{
+    position: fixed;
+    width: 100%;
+    border-bottom: 2rem;
+    -webkit-box-shadow: 0px 13px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 13px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 13px 5px 0px rgba(0,0,0,0.75);
+    backdrop-filter: blur(20px);
+    a{
+        color: antiquewhite;
+        i{
+            font-size: 40px;
+        }
+    }
+}
+
+footer{
+    position: absolute;
+    width: 100%;
+    backdrop-filter: blur(8px);
+    bottom: 0;
+    p{
+        margin-top: 1rem;
+        font-weight: 100;
+        color: antiquewhite;
+    }
+}
+
+
+#contentSection{
+    background-image: url(uploads/libraryBackgrounnd.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .row{
+      min-height: 100vh;
+        .col-12{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .contentField{
+              -webkit-box-shadow: 0px 13px 5px 0px rgba(0,0,0,0.75);
+              -moz-box-shadow: 0px 13px 5px 0px rgba(0,0,0,0.75);
+              box-shadow: 0px 13px 5px 0px rgba(0,0,0,0.75);
+              backdrop-filter: blur(8px);
+              padding: 3rem;
+              border-radius: 1rem;
+              h3{
+                color: antiquewhite;
+              }
+            }
+        }
+    }
+}
+
+#live_search{
+    text-align: center;
+    background-color: rgb(135, 157, 175);
+    opacity: 1;
+    width: 80%;
+    transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
+    &:hover{
+        width: 100%;
+        transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
+    }
+    &::placeholder{
+        color: antiquewhite;
+        
+
+    }
+}
+
+#registerField, #loginField{
+    .row{
+        form{
+            transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
+            &:hover{
+                max-width: 100%;
+                h2, h4{
+                    transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
+                }
+                @include md{
+                    max-width: 55%;
+                }
+            }
+
+        }
+    }
+}
+
+#loginField{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(uploads/libraryBackgrounnd.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    .row{
+        display: flex;
+        justify-content: center;
+        form{
+            text-align: center;
+            transition: ease-out 0.2s;
+            backdrop-filter: blur(4px);
+            padding: 2rem;
+            border-radius: 5px;
+            &:hover{
+                transition: ease-in 0.2s;
+                letter-spacing: 0.8rem;
+            }
+            label{
+                display: flex;
+                justify-content: space-between;
+                i{
+                    font-size: 3rem;
+                    display: flex;
+                    align-items: center;
+                    color: rgb(135, 157, 175);
+                }
+            }
+            span{
+                letter-spacing: 0rem;
+                color: rgb(135, 157, 175);
+            }
+            input{
+                background-color: rgb(94, 97, 97);
+                border-color:  black;
+                border-width: 0.2rem; &:last-of-type{
+                    border: none;
+                    color:  rgb(135, 157, 175)
+                }
+            }
+            .btn{
+                transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
+                background-color: rgb(94, 97, 97);
+                &:last-of-type{
+                    margin-left: 1rem;
+                }
+                &:hover{
+                  scale: 0.9;
+                }
+                span{
+                    color: rgb(135, 157, 175);
+                }
+            }
+        }
+    }
+}
+
+#registerField{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(uploads/libraryBackgrounnd.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    .row{
+        display: flex;
+        justify-content: center;
+        form{
+            text-align: center;
+            transition: ease-out 0.2s;
+            backdrop-filter: blur(4px);
+            padding: 2rem;
+            border-radius: 5px;
+            &:hover{
+                transition: ease-in 0.2s;
+                letter-spacing: 0.8rem;
+            }
+            label{
+                display: flex;
+                justify-content: space-between;
+                i{
+                    font-size: 3rem;
+                    display: flex;
+                    align-items: center;
+                    color: rgb(135, 157, 175);
+                }
+            }
+            span{
+                letter-spacing: 0rem;
+                color: rgb(135, 157, 175);
+            }
+            input{
+                background-color: rgb(94, 97, 97);
+                border-color:  black;
+                border-width: 0.2rem; &:last-of-type{
+                    border: none;
+                    color:  rgb(135, 157, 175)
+                }
+            }
+            .btn{
+                transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
+                background-color: rgb(94, 97, 97);
+                &:last-of-type{
+                    margin-left: 1rem;
+                }
+                &:hover{
+                  scale: 0.9;
+                }
+                span{
+                    color: rgb(135, 157, 175);
+                }
+            }
+        }
+    }
+}

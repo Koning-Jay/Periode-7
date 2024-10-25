@@ -1,0 +1,320 @@
+/* RESPONSIVE */
+/* Small devices */
+/* Medium devices */
+/* Large devices */
+/* Extra large devices */
+* {
+  font-family: "Rowdies", sans-serif;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: rgb(135, 157, 175);
+}
+@media (min-width: 768px) {
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+h4 {
+  color: rgb(135, 157, 175) !important;
+}
+
+h6, h5 {
+  color: antiquewhite;
+}
+
+a {
+  text-decoration: none !important;
+  color: rgb(135, 157, 175);
+  letter-spacing: 0rem;
+}
+a:hover {
+  color: rgb(135, 157, 175);
+}
+
+.reserveren {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.reserveren .btn {
+  background-color: rgb(94, 97, 97);
+  color: rgb(135, 157, 175);
+}
+.reserveren input {
+  background-color: rgb(94, 97, 97);
+  border: none;
+  padding: 0.2rem;
+  text-align: center;
+  max-width: 50%;
+  transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
+  border-radius: 5px;
+}
+.reserveren input:hover {
+  max-width: 100%;
+  transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+.reserveren input::-moz-placeholder {
+  color: rgb(135, 157, 175);
+}
+.reserveren input::placeholder {
+  color: rgb(135, 157, 175);
+}
+
+.gereserveerdeBoeken {
+  display: flex;
+  align-items: center;
+  padding-top: 0.5rem;
+}
+
+#fillInMessage {
+  position: fixed;
+  padding: 20px;
+  border-radius: 7px;
+  top: -10%;
+  z-index: 100;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  transition: ease-in 0.3s;
+  letter-spacing: 7px;
+  border-radius: 5px;
+}
+
+.bookList {
+  box-shadow: 0px 13px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+#fillInMessage h3 {
+  font-size: 25px;
+  margin: 0;
+  color: rgb(135, 157, 175);
+}
+
+.foreground {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  border-bottom: 2rem;
+  box-shadow: 0px 13px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+}
+.navbar a {
+  color: antiquewhite;
+}
+.navbar a i {
+  font-size: 40px;
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  bottom: 0;
+}
+footer p {
+  margin-top: 1rem;
+  font-weight: 100;
+  color: antiquewhite;
+}
+
+#contentSection {
+  background-image: url(uploads/libraryBackgrounnd.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contentSection .row {
+  min-height: 100vh;
+}
+#contentSection .row .col-12 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contentSection .row .col-12 .contentField {
+  box-shadow: 0px 13px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  padding: 3rem;
+  border-radius: 1rem;
+}
+#contentSection .row .col-12 .contentField h3 {
+  color: antiquewhite;
+}
+
+#live_search {
+  text-align: center;
+  background-color: rgb(135, 157, 175);
+  opacity: 1;
+  width: 80%;
+  transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+#live_search:hover {
+  width: 100%;
+  transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+#live_search::-moz-placeholder {
+  color: antiquewhite;
+}
+#live_search::placeholder {
+  color: antiquewhite;
+}
+
+#registerField .row form, #loginField .row form {
+  transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+#registerField .row form:hover, #loginField .row form:hover {
+  max-width: 100%;
+}
+#registerField .row form:hover h2, #registerField .row form:hover h4, #loginField .row form:hover h2, #loginField .row form:hover h4 {
+  transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+@media (min-width: 768px) {
+  #registerField .row form:hover, #loginField .row form:hover {
+    max-width: 55%;
+  }
+}
+
+#loginField {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(uploads/libraryBackgrounnd.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#loginField .row {
+  display: flex;
+  justify-content: center;
+}
+#loginField .row form {
+  text-align: center;
+  transition: ease-out 0.2s;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  padding: 2rem;
+  border-radius: 5px;
+}
+#loginField .row form:hover {
+  transition: ease-in 0.2s;
+  letter-spacing: 0.8rem;
+}
+#loginField .row form label {
+  display: flex;
+  justify-content: space-between;
+}
+#loginField .row form label i {
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  color: rgb(135, 157, 175);
+}
+#loginField .row form span {
+  letter-spacing: 0rem;
+  color: rgb(135, 157, 175);
+}
+#loginField .row form input {
+  background-color: rgb(94, 97, 97);
+  border-color: black;
+  border-width: 0.2rem;
+}
+#loginField .row form input:last-of-type {
+  border: none;
+  color: rgb(135, 157, 175);
+}
+#loginField .row form .btn {
+  transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
+  background-color: rgb(94, 97, 97);
+}
+#loginField .row form .btn:last-of-type {
+  margin-left: 1rem;
+}
+#loginField .row form .btn:hover {
+  scale: 0.9;
+}
+#loginField .row form .btn span {
+  color: rgb(135, 157, 175);
+}
+
+#registerField {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(uploads/libraryBackgrounnd.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#registerField .row {
+  display: flex;
+  justify-content: center;
+}
+#registerField .row form {
+  text-align: center;
+  transition: ease-out 0.2s;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  padding: 2rem;
+  border-radius: 5px;
+}
+#registerField .row form:hover {
+  transition: ease-in 0.2s;
+  letter-spacing: 0.8rem;
+}
+#registerField .row form label {
+  display: flex;
+  justify-content: space-between;
+}
+#registerField .row form label i {
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  color: rgb(135, 157, 175);
+}
+#registerField .row form span {
+  letter-spacing: 0rem;
+  color: rgb(135, 157, 175);
+}
+#registerField .row form input {
+  background-color: rgb(94, 97, 97);
+  border-color: black;
+  border-width: 0.2rem;
+}
+#registerField .row form input:last-of-type {
+  border: none;
+  color: rgb(135, 157, 175);
+}
+#registerField .row form .btn {
+  transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
+  background-color: rgb(94, 97, 97);
+}
+#registerField .row form .btn:last-of-type {
+  margin-left: 1rem;
+}
+#registerField .row form .btn:hover {
+  scale: 0.9;
+}
+#registerField .row form .btn span {
+  color: rgb(135, 157, 175);
+}/*# sourceMappingURL=style.css.map */
